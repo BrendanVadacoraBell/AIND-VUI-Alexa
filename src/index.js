@@ -70,7 +70,7 @@ var handlers = {
         var randomFact = randomPhrase(factArr);
 
         // Create speech output
-        var speechOutput = this.t("GET_FACT_MESSAGE") + randomFact;
+        var speechOutput = getRandomFactMessage() + randomFact;
         this.emit(':askWithCard', speechOutput, 'You can ask for another fact like you did before or even specify a year.', this.t("SKILL_NAME"), randomFact)
     },
     'GetNewYearFactIntent': function () {
